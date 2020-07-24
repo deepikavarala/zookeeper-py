@@ -1,4 +1,4 @@
-# Stage 3
+# Stage 4 - Final Stage
 
 camel = r"""
 Switching on camera from habitat with camels...
@@ -121,20 +121,13 @@ Switching on camera from habitat with rabbits...
 (" ~----( ~   Y.  )
 It seems there will be more rabbits soon!"""
 
+animals = [camel, lion, deer, goose, bat, rabbit]
+
 # write your code here
-print("Which habitat # do you need?")
-num = int(input())
-if num == 0:
-   print(camel)
-elif num == 1:
-   print(lion)
-elif num == 2:
-   print(deer)
-elif num == 3:
-   print(goose)
-elif num == 4:
-   print(bat)
-elif num == 5:
-   print(rabbit)
-print("""---
-The end of the program. To check another habitat restart the watcher please.""")
+while True:
+    num = input('Which habitat # do you need? ')
+    if num != 'exit':
+        print(animals[int(num)])
+    elif num == 'exit':
+        print('See you!')
+        exit()
